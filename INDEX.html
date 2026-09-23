@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sapna Baghel Boutique - Learn Fashion Designing & Stitching</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: #faf5f7;
+            color: #2d2729;
+            line-height: 1.6;
+        }
+
+        /* Header / Top Navigation */
+        .top-bar {
+            background-color: #5c1833;
+            color: #ffffff;
+            text-align: center;
+            padding: 10px 15px;
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        .header {
+            background: #ffffff;
+            padding: 20px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #f0e1e7;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+        }
+
+        .brand-name {
+            font-size: 24px;
+            font-weight: 800;
+            color: #8c1d40;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .phone-link {
+            background-color: #e6c594;
+            color: #4a3319;
+            padding: 8px 16px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #8c1d40 0%, #5c1833 100%);
+            color: #ffffff;
+            padding: 60px 8% 70px 8%;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero-badge {
+            background: rgba(255, 255, 255, 0.15);
+            color: #f7d6a5;
+            padding: 6px 18px;
+            border-radius: 30px;
+            font-size: 13px;
+            font-weight: 700;
+            display: inline-block;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border: 1px solid rgba(247, 214, 165, 0.3);
+        }
+
+        .hero h1 {
+            font-size: 38px;
+            line-height: 1.3;
+            margin-bottom: 20px;
+            font-weight: 800;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: #f2e3e8;
+            max-width: 750px;
+            margin: 0 auto 30px auto;
+        }
+
+        .cta-btn {
+            display: inline-block;
+            background-color: #e6c594;
+            color: #3b2308;
+            font-size: 18px;
+            font-weight: 800;
+            padding: 16px 36px;
+            border-radius: 8px;
+            text-decoration: none;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            transition: transform 0.2s ease, background-color 0.2s ease;
+        }
+
+        .cta-btn:hover {
+            background-color: #f0d1a3;
+            transform: translateY(-2px);
+        }
+
+        /* Section Styling */
+        .section {
+            padding: 60px 8%;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 28px;
+            color: #8c1d40;
+            margin-bottom: 12px;
+            font-weight: 800;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 15px;
+            color: #666;
+            margin-bottom: 40px;
+        }
+
+        /* Benefits Grid */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 24px;
+        }
+
+        .card {
+            background: #ffffff;
+            padding: 30px 24px;
+            border-radius: 12px;
+            border: 1px solid #f0e1e7;
+            box-shadow: 0 4px 12px rgba(140, 29, 64, 0.05);
+            text-align: left;
+        }
+
+        .card-icon {
+            font-size: 32px;
+            margin-bottom: 15px;
+            display: inline-block;
+        }
+
+        .card h3 {
+            font-size: 18px;
+            color: #8c1d40;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .card p {
+            font-size: 14px;
+            color: #555;
+            line-height: 1.5;
+        }
+
+        /* Course Highlights Banner */
+        .highlight-box {
+            background-color: #ffffff;
+            border-left: 6px solid #8c1d40;
+            padding: 30px;
+            border-radius: 8px;
+            margin: 40px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+        }
+
+        .highlight-box h3 {
+            color: #8c1d40;
+            margin-bottom: 15px;
+            font-size: 20px;
+        }
+
+        .highlight-list {
+            list-style: none;
+        }
+
+        .highlight-list li {
+            position: relative;
+            padding-left: 28px;
+            margin-bottom: 12px;
+            font-size: 15px;
+            color: #333;
+        }
+
+        .highlight-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: #8c1d40;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        /* Contact & CTA Section */
+        .contact-section {
+            background: #5c1833;
+            color: #ffffff;
+            text-align: center;
+            padding: 50px 20px;
+            border-radius: 16px;
+            margin: 40px 8%;
+        }
+
+        .contact-section h2 {
+            font-size: 30px;
+            margin-bottom: 15px;
+        }
+
+        .contact-section p {
+            font-size: 16px;
+            color: #f2e3e8;
+            margin-bottom: 25px;
+        }
+
+        .phone-display {
+            font-size: 32px;
+            font-weight: 800;
+            color: #e6c594;
+            margin: 15px 0 25px 0;
+            letter-spacing: 2px;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 25px;
+            font-size: 13px;
+            color: #888;
+            border-top: 1px solid #ebdbe2;
+            background: #ffffff;
+        }
+
+        @media (max-width: 600px) {
+            .hero h1 { font-size: 28px; }
+            .hero p { font-size: 15px; }
+            .phone-display { font-size: 24px; }
+            .header { flex-direction: column; gap: 10px; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="top-bar">
+        ✂️ Learn Boutique-Style Designing & Stitching Step-by-Step
+    </div>
+
+    <div class="header">
+        <div class="brand-name">Sapna Baghel Boutique</div>
+        <a href="tel:6268525566" class="phone-link">📞 Call: 6268525566</a>
+    </div>
+
+    <section class="hero">
+        <span class="hero-badge">Professional Fashion Designing Masterclass</span>
+        <h1>Master the Art of Fashionable Outfit Designing & Stitching</h1>
+        <p>Transform your passion for fashion into a profitable skill. Learn custom garment cutting, stitching, neck patterns, and boutique business tips from home.</p>
+        <a href="tel:6268525566" class="cta-btn">CALL NOW TO ENROLL: 6268525566</a>
+    </section>
+
+    <section class="section">
+        <h2 class="section-title">Why Join Sapna Baghel Boutique Training?</h2>
+        <p class="section-subtitle">Practical, step-by-step training designed for beginners and aspiring boutique owners.</p>
+
+        <div class="grid">
+            <div class="card">
+                <span class="card-icon">👗</span>
+                <h3>Trendy Outfit Design</h3>
+                <p>Learn cutting & stitching for modern designer suits, kurtis, lehengas, blouses, and trendy Indo-Western wear.</p>
+            </div>
+
+            <div class="card">
+                <span class="card-icon">📐</span>
+                <h3>Perfect Fitting Secrets</h3>
+                <p>Master precise measurement taking, armhole cutting, and neck patterning for flawless fitting every single time.</p>
+            </div>
+
+            <div class="card">
+                <span class="card-icon">💡</span>
+                <h3>Beginner to Advanced</h3>
+                <p>No prior stitching expertise needed! Easy-to-follow practical guidance step by step.</p>
+            </div>
+
+            <div class="card">
+                <span class="card-icon">💼</span>
+                <h3>Boutique Business Setup</h3>
+                <p>Learn how to manage clients, price your designs, source materials, and run your own successful boutique business.</p>
+            </div>
+        </div>
+
+        <div class="highlight-box">
+            <h3>What You Will Learn In This Course:</h3>
+            <ul class="highlight-list">
+                <li>Complete garment measurement & fabric drafting methods</li>
+                <li>Latest sleeve patterns, necklines, and designer finishing techniques</li>
+                <li>Troubleshooting fitting issues and altering ready-made outfits</li>
+                <li>How to take client orders and scale your boutique brand</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="contact-section">
+        <h2>Ready to Start Your Fashion Designing Journey?</h2>
+        <p>Book your slot today or contact us directly for course details and batch timings.</p>
+        <div class="phone-display">📞 6268525566</div>
+        <a href="tel:6268525566" class="cta-btn">CALL NOW & REGISTER</a>
+    </section>
+
+    <div class="footer">
+        © Sapna Baghel Boutique. All Rights Reserved. | Contact: 6268525566
+    </div>
+
+</body>
+</html>
