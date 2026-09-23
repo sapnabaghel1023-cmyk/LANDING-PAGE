@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sapna Baghel Boutique | Fashion Designing & Stitching</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #fdf8fa;
+            color: #2b2b2b;
+            line-height: 1.6;
+        }
+
+        /* Top Announcement Bar */
+        .announcement-bar {
+            background: #4a1226;
+            color: #f2d6b3;
+            text-align: center;
+            padding: 10px 15px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        /* Header / Navigation */
+        header {
+            background: #ffffff;
+            padding: 18px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: 800;
+            color: #7a1c3e;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .header-btn {
+            background: #7a1c3e;
+            color: #ffffff;
+            padding: 10px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        .header-btn:hover {
+            background: #5a132d;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #7a1c3e 0%, #4a1226 100%);
+            color: #ffffff;
+            padding: 70px 8% 80px 8%;
+            text-align: center;
+        }
+
+        .hero-badge {
+            background: rgba(255, 255, 255, 0.15);
+            color: #f3d4a0;
+            padding: 6px 20px;
+            border-radius: 30px;
+            font-size: 13px;
+            font-weight: 700;
+            display: inline-block;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            border: 1px solid rgba(243, 212, 160, 0.4);
+        }
+
+        .hero h1 {
+            font-size: 38px;
+            line-height: 1.3;
+            margin-bottom: 20px;
+            font-weight: 800;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: #fce8f0;
+            max-width: 750px;
+            margin: 0 auto 35px auto;
+        }
+
+        .cta-btn {
+            display: inline-block;
+            background: #f3d4a0;
+            color: #4a1226;
+            font-size: 18px;
+            font-weight: 800;
+            padding: 16px 36px;
+            border-radius: 8px;
+            text-decoration: none;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .cta-btn:hover {
+            background: #ffe3b3;
+            transform: translateY(-3px);
+        }
+
+        /* Container Section */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 60px 8%;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 30px;
+            color: #7a1c3e;
+            margin-bottom: 10px;
+            font-weight: 800;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 45px;
+        }
+
+        /* Benefits Grid */
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 25px;
+        }
+
+        .benefit-card {
+            background: #ffffff;
+            padding: 30px 25px;
+            border-radius: 12px;
+            border: 1px solid #f2d6e3;
+            box-shadow: 0 5px 15px rgba(122, 28, 62, 0.05);
+        }
+
+        .benefit-icon {
+            font-size: 36px;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .benefit-card h3 {
+            font-size: 19px;
+            color: #7a1c3e;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .benefit-card p {
+            font-size: 14px;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        /* Curriculum Box */
+        .course-box {
+            background: #ffffff;
+            border-left: 6px solid #7a1c3e;
+            padding: 35px;
+            border-radius: 10px;
+            margin-top: 50px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+        }
+
+        .course-box h3 {
+            color: #7a1c3e;
+            font-size: 22px;
+            margin-bottom: 20px;
+        }
+
+        .course-list {
+            list-style: none;
+        }
+
+        .course-list li {
+            position: relative;
+            padding-left: 30px;
+            margin-bottom: 14px;
+            font-size: 16px;
+            color: #333;
+        }
+
+        .course-list li::before {
+            content: "✔";
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: #7a1c3e;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        /* Call To Action Box */
+        .cta-section {
+            background: linear-gradient(135deg, #4a1226 0%, #7a1c3e 100%);
+            color: #ffffff;
+            text-align: center;
+            padding: 50px 25px;
+            border-radius: 16px;
+            margin: 20px 8% 60px 8%;
+        }
+
+        .cta-section h2 {
+            font-size: 32px;
+            margin-bottom: 15px;
+        }
+
+        .cta-section p {
+            font-size: 16px;
+            color: #fce8f0;
+            margin-bottom: 25px;
+        }
+
+        .phone-number {
+            font-size: 34px;
+            font-weight: 800;
+            color: #f3d4a0;
+            margin: 15px 0 25px 0;
+            letter-spacing: 2px;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 25px;
+            font-size: 14px;
+            color: #777;
+            background: #ffffff;
+            border-top: 1px solid #eee;
+        }
+
+        @media (max-width: 600px) {
+            header { padding: 14px 5%; flex-direction: column; gap: 12px; text-align: center; }
+            .logo { font-size: 18px; }
+            .hero { padding: 55px 5% 65px; }
+            .hero h1 { font-size: 28px; }
+            .hero p { font-size: 15px; }
+            .cta-btn { width: 100%; max-width: 360px; font-size: 16px; padding: 14px 18px; }
+            .container { padding: 45px 5%; }
+            .section-title { font-size: 25px; }
+            .course-box { padding: 25px 20px; }
+            .cta-section { margin: 10px 5% 45px; padding: 40px 20px; }
+            .cta-section h2 { font-size: 26px; }
+            .phone-number { font-size: 24px; }
+        }
+    </style>
+    <!-- GitHub Pages ready: keep this file named index.html in the repository root. -->
+</head>
+<body>
+
+    <div class="announcement-bar">
+        ✨ Learn Fashion Designing & Stitching - New Batch Starting Soon!
+    </div>
+
+    <header>
+        <div class="logo">Sapna Baghel Boutique</div>
+        <a href="tel:+91+91 62685 25566" class="header-btn">📞 Call: +91 62685 25566</a>
+    </header>
+
+    <section class="hero">
+        <span class="hero-badge">Professional Online & Offline Training</span>
+        <h1>Master Fashionable Clothes Designing & Stitching From Home</h1>
+        <p>Ghar baithe designer suits, kurtis, lehengas, aur trendy outfits ki cutting, stitching aur fitting ke secrets sikhein.</p>
+        <a href="tel:+91+91 62685 25566" class="cta-btn">CALL NOW TO REGISTER: +91 62685 25566</a>
+    </section>
+
+    <section class="container">
+        <h2 class="section-title">Course Benefits & Highlights</h2>
+        <p class="section-subtitle">Aapko is training me kya-kya sikhne ko milega:</p>
+
+        <div class="benefits-grid">
+            <div class="benefit-card">
+                <span class="benefit-icon">👗</span>
+                <h3>Trendy Outfit Design</h3>
+                <p>Latest designer suits, kurtis, neck patterns, sleeves, aur lehengas ki complete cutting aur stitching.</p>
+            </div>
+
+            <div class="benefit-card">
+                <span class="benefit-icon">📐</span>
+                <h3>Perfect Fitting Methods</h3>
+                <p>Armhole cutting, shoulder measurement, aur body shape ke hisaab se perfect fitting ki master techniques.</p>
+            </div>
+
+            <div class="benefit-card">
+                <span class="benefit-icon">💡</span>
+                <h3>Beginner Friendly</h3>
+                <p>Agar aapko pehle se stitching nahi aati, toh bhi simple step-by-step tareeke se poora course sikhaya jayega.</p>
+            </div>
+
+            <div class="benefit-card">
+                <span class="benefit-icon">💼</span>
+                <h3>Boutique Business Guide</h3>
+                <p>Apna boutique kaise start karein, client order kaise lein, aur pricing kaise rakhein - sabhi tips.</p>
+            </div>
+        </div>
+
+        <div class="course-box">
+            <h3>Key Features of Training:</h3>
+            <ul class="course-list">
+                <li>Detailed fabric measurement aur drafting charts</li>
+                <li>Trendy neck design, designer sleeves aur dori patterns</li>
+                <li>Fitting alteration aur readymade clothes modification techniques</li>
+                <li>Boutique management aur professional client dealing guidance</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <h2>Join Sapna Baghel Boutique Training Today!</h2>
+        <p>Enrollment ke liye abhi call karein ya WhatsApp par message karein.</p>
+        <div class="phone-number">📱 +91 62685 25566</div>
+        <a href="tel:+91+91 62685 25566" class="cta-btn">CALL NOW FOR DETAILS</a>
+    </section>
+
+    <footer>
+        © Sapna Baghel Boutique | All Rights Reserved | Contact: +91 62685 25566
+    </footer>
+
+</body>
+</html>
